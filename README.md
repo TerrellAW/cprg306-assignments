@@ -1,3 +1,7 @@
+WEB DEV 2 ASSIGNMENTS
+
+This project will contain all my projects for the Web Dev 2 course.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

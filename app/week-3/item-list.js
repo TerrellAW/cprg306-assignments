@@ -1,73 +1,143 @@
-// List copied from Week 3 Assignment page
-  
+// Import Item component for use in ItemList component
+import Item from "./item";
+
+// Render list of items
+export default function ItemList() {
+  // List copied from Week 3 Assignment page
   const item1 = {
-    name: "milk, 4 L 🥛",
+    name: "Milk, 4 L 🥛",
     quantity: 1,
-    category: "dairy",
+    category: "Dairy",
   };
    
   const item2 = {
-    name: "bread 🍞",
+    name: "Bread 🍞",
     quantity: 2,
-    category: "bakery",
+    category: "Bakery",
   };
    
   const item3 = {
-    name: "eggs, dozen 🥚",
+    name: "Eggs, Dozen 🥚",
     quantity: 2,
-    category: "dairy",
+    category: "Dairy",
   };
    
   const item4 = {
-    name: "bananas 🍌",
+    name: "Bananas 🍌",
     quantity: 6,
-    category: "produce",
+    category: "Produce",
   };
    
   const item5 = {
-    name: "broccoli 🥦",
+    name: "Broccoli 🥦",
     quantity: 3,
-    category: "produce",
+    category: "Produce",
   };
    
   const item6 = {
-    name: "chicken breasts, 1 kg 🍗",
+    name: "Chicken Breasts, 1 kg 🍗",
     quantity: 1,
-    category: "meat",
+    category: "Meat",
   };
    
   const item7 = {
-    name: "pasta sauce 🍝",
+    name: "Pasta Sauce 🍝",
     quantity: 3,
-    category: "canned goods",
+    category: "Canned Goods",
   };
    
   const item8 = {
-    name: "spaghetti, 454 g 🍝",
+    name: "Spaghetti, 454 g 🍝",
     quantity: 2,
-    category: "dry goods",
+    category: "Dry Goods",
   };
    
   const item9 = {
-    name: "toilet paper, 12 pack 🧻",
+    name: "Toilet Paper, 12 Pack 🧻",
     quantity: 1,
-    category: "household",
+    category: "Household",
   };
    
   const item10 = {
-    name: "paper towels, 6 pack",
+    name: "Paper Towels, 6 Pack",
     quantity: 1,
-    category: "household",
+    category: "Household",
   };
    
   const item11 = {
-    name: "dish soap 🍽️",
+    name: "Dish Soap 🍽️",
     quantity: 1,
-    category: "household",
+    category: "Household",
   };
    
   const item12 = {
-    name: "hand soap 🧼",
+    name: "Hand Soap 🧼",
     quantity: 4,
-    category: "household",
+    category: "Household",
   };
+
+  return (
+    <div>
+      <Item
+        name={item1.name}
+        quantity={item1.quantity}
+        category={item1.category} 
+      /> 
+      <Item
+        name={item2.name}
+        quantity={item2.quantity}
+        category={item2.category}
+      />
+      <Item
+        name={item3.name}
+        quantity={item3.quantity}
+        category={item3.category}
+      />
+      <Item
+        name={item4.name}
+        quantity={item4.quantity}
+        category={item4.category}
+      />
+      <Item
+        name={item5.name}
+        quantity={item5.quantity}
+        category={item5.category}
+      />
+      <Item
+        name={item6.name}
+        quantity={item6.quantity}
+        category={item6.category}
+      />
+      <Item
+        name={item7.name}
+        quantity={item7.quantity}
+        category={item7.category}
+      />
+      <Item
+        name={item8.name}
+        quantity={item8.quantity}
+        category={item8.category}
+      />
+      <Item
+        name={item9.name}
+        quantity={item9.quantity}
+        category={item9.category}
+      />
+      <Item
+        name={item10.name}
+        quantity={item10.quantity}
+        category={item10.category}
+      />
+      <Item
+        name={item11.name}
+        quantity={item11.quantity}
+        category={item11.category}
+      />
+      <Item
+        name={item12.name}
+        quantity={item12.quantity}
+        category={item12.category}
+      />
+    </div>
+  );
+}

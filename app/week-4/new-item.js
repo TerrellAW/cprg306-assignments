@@ -35,7 +35,7 @@ export default function NewItem() {
             >
                 -
             </button>
-            <span className="text-lg text-sky-100">{quantity}</span>
+            <span className="text-lg text-sky-100 w-4 text-center">{quantity}</span>
             <button 
                 onClick={Increment} 
                 disabled={quantity === 20} 

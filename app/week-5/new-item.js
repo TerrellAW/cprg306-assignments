@@ -32,7 +32,7 @@ export default function NewItem() {
     // Form submission handler
     function handleSubmit(event) {
         event.preventDefault();
-        item = { name, quantity, category };
+        let item = { name, quantity, category };
         console.log(item);
         alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
         setName("");

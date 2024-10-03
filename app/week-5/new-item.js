@@ -51,8 +51,30 @@ export default function NewItem() {
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     placeholder="Name"
-                    className="px-4 py-2 border rounded w-64"
+                    className="ml-4 py-2 border rounded w-64 text-center"
+                    required
                 />
+            </div>
+
+            {/* Category dropdown */}
+            <div>
+                <select
+                    value={category}
+                    onChange={(event) => setCategory(event.target.value)}
+                    className="mb-10 py-2 border rounded w-64 text-center"
+                >
+                    <option value="produce">Produce</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="pantry">Meat</option>
+                    <option value="frozen">Frozen Foods</option>
+                    <option value="other">Canned Goods</option>
+                    <option value="other">Dry Goods</option>
+                    <option value="other">Beverages</option>
+                    <option value="other">Snacks</option>
+                    <option value="other">Household</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
 
             {/* Item counter */}
@@ -77,6 +99,16 @@ export default function NewItem() {
                     }
                 >
                     +
+                </button>
+            </div>
+
+            {/* Submit button */}
+            <div>
+                <button 
+                    onClick={handleSubmit} 
+                    className="mt-10 px-4 py-2 bg-sky-100 text-black rounded"
+                >
+                    Add Item
                 </button>
             </div>
         </form>

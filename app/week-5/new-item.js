@@ -66,13 +66,13 @@ export default function NewItem() {
                     <option value="produce">Produce</option>
                     <option value="dairy">Dairy</option>
                     <option value="bakery">Bakery</option>
-                    <option value="pantry">Meat</option>
+                    <option value="meat">Meat</option>
                     <option value="frozen">Frozen Foods</option>
-                    <option value="other">Canned Goods</option>
-                    <option value="other">Dry Goods</option>
-                    <option value="other">Beverages</option>
-                    <option value="other">Snacks</option>
-                    <option value="other">Household</option>
+                    <option value="canned_goods">Canned Goods</option>
+                    <option value="dry_goods">Dry Goods</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="household">Household</option>
                     <option value="other">Other</option>
                 </select>
             </div>

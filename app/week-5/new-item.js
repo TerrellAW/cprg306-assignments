@@ -80,6 +80,7 @@ export default function NewItem() {
             {/* Item counter */}
             <div className="flex items-center space-x-4">
                 <button 
+                    type="button"
                     onClick={Decrement} 
                     disabled={quantity === 1} 
                     className={
@@ -91,6 +92,7 @@ export default function NewItem() {
                 </button>
                 <span className="text-lg text-sky-100 w-4 text-center">{quantity}</span>
                 <button 
+                    type="button"
                     onClick={Increment} 
                     disabled={quantity === 20} 
                     className={
@@ -105,6 +107,7 @@ export default function NewItem() {
             {/* Submit button */}
             <div>
                 <button 
+                    type="submit"
                     onClick={handleSubmit} 
                     className="mt-10 px-4 py-2 bg-sky-100 text-black rounded"
                 >

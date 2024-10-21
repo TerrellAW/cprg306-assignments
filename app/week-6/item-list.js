@@ -39,6 +39,15 @@ export default function ItemList() {
       >
         Category
       </button>
+      <button
+        type="button"
+        // TODO: Find a way to group items by category using JS' reduce and Tailwind's capitalize
+        className={
+          `px-4 py-2 border rounded text-sky-100 border-sky-100`
+        }
+      >
+        Group by Category
+      </button>
       <ul>
         {items.map((item, index) => (
           <li key={index}>

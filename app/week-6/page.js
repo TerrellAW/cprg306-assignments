@@ -1,4 +1,4 @@
-import Item from "../week-3/item";
+import Item from "./item";
 import ItemList from "./item-list";
 
 

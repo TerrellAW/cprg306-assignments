@@ -13,7 +13,22 @@ export default function ItemList() {
   const [sortBy, setSortBy] = useState("name");
 
   // Sort items by sortBy property, set by buttons
-  items.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
+  const sortedItems =
+    // If sortBy is "groupCategory", group items by category, else sort with localeCompare
+    sortBy === "groupCategory"
+      ? Object.entries(
+          items.reduce((acc, item) => {
+            if (!acc[item.category]) {
+              acc[item.category] = [];
+            }
+            acc[item.category].push(item);
+            return acc;
+          }, {})
+        ).map(([category, items]) => ({
+            category,
+            items: items.sort((a, b) => (a.name || "").localeCompare(b.name || ""))
+          }))
+      : items.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
   
   return (
     <div>
@@ -38,15 +53,6 @@ export default function ItemList() {
         }
       >
         Category
-      </button>
-      <button
-        type="button"
-        // TODO: Find a way to group items by category using JS' reduce and Tailwind's capitalize
-        className={
-          `px-4 py-2 border rounded text-sky-100 border-sky-100`
-        }
-      >
-        Group by Category
       </button>
       <ul>
         {items.map((item, index) => (

@@ -26,11 +26,13 @@ export default function Page() {
             <div className="container mx-auto p-4">
                 <h1 className="text-2xl font-semibold text-sky-100 p-10 text-center">Week 8</h1>   
                 <div className="flex flex-col lg:flex-row gap-6">
-                    <NewItem onAddItem={handleAddItem} existingIds={existingIds} />
-                    <ItemList items={items} onItemSelect={handleItemSelect} />
-                </div>
-                <div className="w-full lg:w-1/2">
-                    <MealIdeas ingredient={selectedItemName} />
+                    <div className="flex flex-col w-full">
+                        <NewItem onAddItem={handleAddItem} existingIds={existingIds} />
+                        <ItemList items={items} onItemSelect={handleItemSelect} />
+                    </div>
+                    <div className="w-full lg:w-1/2">
+                        <MealIdeas ingredient={selectedItemName} />
+                    </div>
                 </div>
             </div>
         </main>

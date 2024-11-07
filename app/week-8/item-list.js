@@ -64,7 +64,7 @@ export default function ItemList({ items, onItemSelect }) {
                   onClick={() => onItemSelect(item)}
                   key={index}
                 >
-                  <Item {...item} />
+                  <Item key={item.key} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)} />
                 </li>
               ))}
             </ul>
@@ -77,7 +77,7 @@ export default function ItemList({ items, onItemSelect }) {
               onClick={() => onItemSelect(item)}
               key={index}
             >
-              <Item {...item} />
+              <Item key={item.key} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)} />
             </li>
           ))}
         </ul>
